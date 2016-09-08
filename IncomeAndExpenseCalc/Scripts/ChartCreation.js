@@ -1,7 +1,7 @@
 ﻿
 drawIncome = function (chartType, salary, otherIncome, totalIncome) {
 
-    if (salary === "0" && otherIncome === "0") {
+    if (salary === 0 && otherIncome === 0) {
         document.getElementById("chartPlaceholderIncome").style.display = "none";
         document.getElementById("noDataPlaceholderIncome").textContent = "Not enough data to draw chart";
     } else {
@@ -40,8 +40,7 @@ drawIncome = function (chartType, salary, otherIncome, totalIncome) {
 
 drawExp = function (chartType, mortage, utilities, tvandothers, insurance, petrol, other, totalExp) {
 
-    if (mortage === "0" && utilities === "0" && tvandothers === "0" && insurance === "0" && petrol === "0" && other === "0"
-        ) {
+    if (mortage === 0 && utilities === 0 && tvandothers === 0 && insurance === 0 && petrol === 0 && other === 0) {
         document.getElementById("chartPlaceholderExp").style.display = "none";
         document.getElementById("noDataPlaceholderExp").textContent = "Not enough data to draw chart";
     } else {

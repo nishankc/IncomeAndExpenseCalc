@@ -24,15 +24,24 @@
         <br />
         <form id="form1" runat="server">
             <div class="row">
+                <asp:ValidationSummary ID="vs" runat="server" CssClass="alert-danger" HeaderText="Enter only numbers in the fields listed below:" 
+                    BorderStyle="Solid" BorderWidth="2px" BorderColor="Red" />
+                <br />
             <div class=" form-group col-md-1">
                 <h3>Income</h3>
                 <div>
                     <asp:Label ID="SalaryLabel" runat="server">Monthly Salary </asp:Label>
                     <asp:TextBox ID="SalaryTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="SalaryCV" runat="server" ControlToValidate="SalaryTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Salary" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
+                    
                 </div>
                 <div>
                     <asp:Label ID="AdditionalIncomeLabel" runat="server">Additional Income </asp:Label>
                     <asp:TextBox ID="AdditionalIncomeTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="AdditionalIncomeCV" runat="server" ControlToValidate="AdditionalIncomeTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Other Income" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
+                    
                </div>
           </div> 
        
@@ -41,38 +50,60 @@
                 <div>
                     <asp:Label ID="MortgageLabel" runat="server">Mortgage/Rent</asp:Label>
                     <asp:TextBox ID="MortgageTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="MortgageCV" runat="server" ControlToValidate="MortgageTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Mortgage" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
+                    
+                    
                 </div>
                 <div>
                     <asp:Label ID="ElectricityLabel" runat="server">Electricity</asp:Label>
                     <asp:TextBox ID="ElectricityTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="ElectricityCV" runat="server" ControlToValidate="ElectricityTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Electricity" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
+                    
                 </div>
                 <div>
                     <asp:Label ID="GasLabel" runat="server">Gas</asp:Label>
                     <asp:TextBox ID="GasTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="GasCV" runat="server" ControlToValidate="GasTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Gas" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
                 </div>
                 <div>
                     <asp:Label ID="TvLabel" runat="server">T.V/Satellite/Cable</asp:Label>
                     <asp:TextBox ID="TvTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="TvCV" runat="server" ControlToValidate="TvTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Tv" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
                 </div>
                 <div>
                     <asp:Label ID="PhoneLabel" runat="server">Phone/Mobile Phone</asp:Label>
                     <asp:TextBox ID="PhoneTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="PhoneCV" runat="server" ControlToValidate="PhoneTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Phone" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
                 </div>
                 <div>
                     <asp:Label ID="InternetLabel" runat="server">Internet</asp:Label>
                     <asp:TextBox ID="InternetTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="InternetCV" runat="server" ControlToValidate="InternetTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Internet" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
                 </div>
                 <div>
                     <asp:Label ID="PetrolLabel" runat="server">Petrol</asp:Label>
                     <asp:TextBox ID="PetrolTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="PetrolCV" runat="server" ControlToValidate="PetrolTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Petrol" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
+                    
                 </div>
                 <div>
                     <asp:Label ID="InsuranceLabel" runat="server">Insurance</asp:Label>
                     <asp:TextBox ID="InsuranceTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="InsuranceCV" runat="server" ControlToValidate="InsuranceTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Insurance" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
                 </div>
                 <div>
                     <asp:Label ID="OtherExpLabel" runat="server">Other/Misc Expenses</asp:Label>
                     <asp:TextBox ID="OtherExpTextBox" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:CompareValidator ID="OtherExpCV" runat="server" ControlToValidate="OtherExpTextBox" Type="Currency"
+                                Operator="DataTypeCheck" Text="*" ErrorMessage="Other Expenses" Display="Dynamic" CssClass="text-danger"></asp:CompareValidator>
                 </div>
             </div>
         
